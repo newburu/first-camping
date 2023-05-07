@@ -81,3 +81,15 @@ gem "omniauth-rails_csrf_protection"
 
 # 環境変数
 gem 'dotenv-rails'
+
+# 自動デプロイ
+group :development do
+  gem 'capistrano'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano3-puma'
+  gem 'ed25519' 
+  gem 'bcrypt_pbkdf'
+  gem 'sshkit-sudo'
+end
