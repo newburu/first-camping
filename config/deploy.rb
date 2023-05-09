@@ -17,7 +17,7 @@ set :keep_releases, 5
 
 # rbenvの設定
 set :rbenv_type, :user
-set :rbenv_ruby, '3.2.0'
+set :rbenv_ruby, '3.2.2'
 
 # Pumaを再起動するための記述
 namespace :deploy do
