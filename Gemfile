@@ -93,3 +93,13 @@ group :development do
   gem 'bcrypt_pbkdf'
   gem 'sshkit-sudo'
 end
+
+# View関係
+gem "slim-rails"
+gem "simple_form"
+
+# i18n
+gem 'rails-i18n'
+group :development do
+  gem 'i18n-debug'
+end

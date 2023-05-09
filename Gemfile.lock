@@ -131,6 +131,8 @@ GEM
     hashie (5.0.0)
     i18n (1.13.0)
       concurrent-ruby (~> 1.0)
+    i18n-debug (1.2.0)
+      i18n (< 2)
     importmap-rails (1.1.6)
       actionpack (>= 6.0.0)
       railties (>= 6.0.0)
@@ -231,6 +233,9 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.5.0)
       loofah (~> 2.19, >= 2.19.1)
+    rails-i18n (7.0.6)
+      i18n (>= 0.7, < 2)
+      railties (>= 6.0.0, < 8)
     railties (7.0.4.3)
       actionpack (= 7.0.4.3)
       activesupport (= 7.0.4.3)
@@ -252,6 +257,16 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    simple_form (5.2.0)
+      actionpack (>= 5.2)
+      activemodel (>= 5.2)
+    slim (5.1.0)
+      temple (~> 0.10.0)
+      tilt (>= 2.0.6, < 2.2)
+    slim-rails (3.6.2)
+      actionpack (>= 3.1)
+      railties (>= 3.1)
+      slim (>= 3.0, < 6.0, != 5.0.0)
     snaky_hash (2.0.1)
       hashie
       version_gem (~> 1.1, >= 1.1.1)
@@ -271,7 +286,9 @@ GEM
       sshkit (~> 1.8)
     stimulus-rails (1.2.1)
       railties (>= 6.0.0)
+    temple (0.10.0)
     thor (1.2.1)
+    tilt (2.1.0)
     timeout (0.3.2)
     turbo-rails (1.4.0)
       actionpack (>= 6.0.0)
@@ -317,6 +334,7 @@ DEPENDENCIES
   devise-i18n
   dotenv-rails
   ed25519
+  i18n-debug
   importmap-rails
   jbuilder
   omniauth
@@ -325,7 +343,10 @@ DEPENDENCIES
   omniauth-twitter
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.3)
+  rails-i18n
   selenium-webdriver
+  simple_form
+  slim-rails
   sprockets-rails
   sqlite3 (~> 1.4)
   sshkit-sudo
