@@ -1,0 +1,10 @@
+p style="color: green" = notice
+
+== render @camp_site
+
+div
+  => link_to "Edit this camp site", edit_camp_site_path(@camp_site)
+  '|
+  =< link_to "Back to camp sites", camp_sites_path
+
+  = button_to "Destroy this camp site", @camp_site, method: :delete

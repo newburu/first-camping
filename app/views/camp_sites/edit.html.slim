@@ -1,0 +1,10 @@
+h1 Editing camp site
+
+== render "form", camp_site: @camp_site
+
+br
+
+div
+  => link_to "Show this camp site", @camp_site
+  '|
+  =< link_to "Back to camp sites", camp_sites_path

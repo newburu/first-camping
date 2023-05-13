@@ -1,0 +1,11 @@
+p style="color: green" = notice
+
+h1 Camp sites
+
+#camp_sites
+  - @camp_sites.each do |camp_site|
+    == render camp_site
+    p
+      = link_to "Show this camp site", camp_site
+
+= link_to "New camp site", new_camp_site_path
