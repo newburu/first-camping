@@ -4,7 +4,9 @@ class CreateCampSites < ActiveRecord::Migration[7.0]
       t.string :name
       t.string :address
       t.string :url
+      t.json :images
       t.text :detail
+      t.datetime :deleted_at
 
       t.timestamps
     end

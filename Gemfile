@@ -103,3 +103,10 @@ gem 'rails-i18n'
 group :development do
   gem 'i18n-debug'
 end
+
+# 画像アップロード
+gem 'carrierwave'
+gem "mini_magick"
+
+# 論理削除
+gem 'paranoia'

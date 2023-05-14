@@ -2,9 +2,10 @@ p style="color: green" = notice
 
 == render @camp_site
 
-div
-  => link_to "Edit this camp site", edit_camp_site_path(@camp_site)
-  '|
-  =< link_to "Back to camp sites", camp_sites_path
-
-  = button_to "Destroy this camp site", @camp_site, method: :delete
+.flex.flex-row.p-2
+  .p-1
+    = link_to t('btn.edit'), edit_camp_site_path(@camp_site), class: "btn btn-primary rounded-md"
+  .p-1
+    = button_to t('btn.destroy'), @camp_site, method: :delete, form: { data: { turbo_confirm: t('confirm.destroy') } }, class: "btn btn-warning rounded-md"
+  .p-1
+    = link_to t('btn.back'), camp_sites_path, class: "btn btn-secondary rounded-md"

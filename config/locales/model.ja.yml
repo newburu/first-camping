@@ -1,0 +1,23 @@
+ja:
+  activerecord:
+    models:
+      # view側： CampSite.model_name.human => "キャンプ場" / t("activerecord.models.camp_site")と同じ
+      camp_site: キャンプ場
+    # model毎に定義したいattributesを記述
+    attributes:
+        camp_site:
+          id: ID
+          # view側： CampSite.human_attribute_name :name => "名称" /　t("activerecord.attributes.camp_site.name")と同じ
+          name: 名称
+  # 全てのmodelで共通して使用するattributesを定義
+  attributes:
+    created_at: 作成日
+    updated_at: 更新日
+
+  camp_sites:
+    create:
+      notice: "キャンプ場の登録に成功しました。"
+    update:
+      notice: "キャンプ場の更新に成功しました。"
+    destroy:
+      notice: "キャンプ場の削除に成功しました。"

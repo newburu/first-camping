@@ -7,8 +7,14 @@ Rails.application.routes.draw do
     # Twitter API認証用
     :omniauth_callbacks => 'users/omniauth_callbacks',
   }
+
+  resources :camp_sites do
+    resources :images, :only => [:create, :destroy] # support #create and #destroy
+  end
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
   # root "articles#index"
+  root 'camp_sites#index'
 end

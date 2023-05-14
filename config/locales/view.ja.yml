@@ -1,0 +1,22 @@
+ja:
+  menu:
+    camp_site: キャンプ場
+    static_pages:
+      info: このサイトについて
+      privacy: プライバシーポリシー
+      terms: 利用規約
+  stores:
+    index:
+      title: キャンプ場
+      btn:
+        new: キャンプ場を追加する
+        show: このキャンプ場を見る
+    new:
+      title: キャンプ場を追加
+    show:
+      title: キャンプ場
+      btn:
+        edit: このキャンプ場を編集する
+        destroy: このキャンプ場を削除する
+    edit:
+      title: キャンプ場を修正

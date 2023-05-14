@@ -15,7 +15,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_09_135732) do
     t.string "name"
     t.string "address"
     t.string "url"
+    t.json "images"
     t.text "detail"
+    t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -65,6 +65,6 @@ class CampSitesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def camp_site_params
-      params.require(:camp_site).permit(:name, :address, :url, :detail)
+      params.require(:camp_site).permit(:name, :address, :url, {images: []}, :detail)
     end
 end
