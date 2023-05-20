@@ -14,7 +14,7 @@
           = link_to t('btn.destroy'), camp_site_image_path(@camp_site, idx), data: { turbo_method: :delete, turbo_confirm: t('confirm.destroy') }, class: "btn btn-warning rounded-md"
     .p-2
       = f.file_field :images, multiple: true, class: "file-input file-input-bordered w-full rounded-md"
-    = f.input :detail
+    = f.rich_text_area :detail
 
   .form-actions.flex.flex-row.p-2
     .p-1

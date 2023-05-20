@@ -358,6 +358,7 @@ DEPENDENCIES
   dotenv-rails
   ed25519
   i18n-debug
+  image_processing (~> 1.2)
   importmap-rails
   jbuilder
   mini_magick

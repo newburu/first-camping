@@ -4,6 +4,8 @@ class CampSite < ApplicationRecord
 
   acts_as_paranoid
 
+  has_rich_text :detail
+
   validates :name, presence: true
 
   # NEW表示しておく日数
