@@ -110,3 +110,6 @@ gem "mini_magick"
 
 # 論理削除
 gem 'paranoia'
+
+# 検索
+gem 'ransack'

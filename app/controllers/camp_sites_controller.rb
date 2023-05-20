@@ -3,7 +3,8 @@ class CampSitesController < ApplicationController
 
   # GET /camp_sites or /camp_sites.json
   def index
-    @camp_sites = CampSite.all
+    @q = CampSite.ransack(params[:q])
+    @camp_sites = @q.result
   end
 
   # GET /camp_sites/1 or /camp_sites/1.json
