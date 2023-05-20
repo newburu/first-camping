@@ -17,7 +17,7 @@ class CampSitesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create camp_site" do
     assert_difference("CampSite.count") do
-      post camp_sites_url, params: { camp_site: { address: @camp_site.address, detail: @camp_site.detail, name: @camp_site.name, url: @camp_site.url } }
+      post camp_sites_url, params: { camp_site: { address: @camp_site.address, detail: @camp_site.detail, name: @camp_site.name, website_url: @camp_site.website_url } }
     end
 
     assert_redirected_to camp_site_url(CampSite.last)

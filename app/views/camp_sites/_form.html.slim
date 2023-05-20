@@ -5,7 +5,7 @@
   .form-inputs.flex.flex-col
     = f.input :name
     = f.input :address
-    = f.input :url
+    = f.input :website_url
     - @camp_site.images.each_with_index do |image, idx|
       .flex.flex-row.p-2
         = hidden_field :camp_site, :images, multiple: true, value: image.identifier

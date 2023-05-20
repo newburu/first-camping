@@ -3,11 +3,11 @@
 one:
   name: MyString
   address: MyString
-  url: MyString
+  website_url: MyString
   detail: MyText
 
 two:
   name: MyString
   address: MyString
-  url: MyString
+  website_url: MyString
   detail: MyText

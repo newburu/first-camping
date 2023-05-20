@@ -10,7 +10,7 @@ ja:
           # view側： CampSite.human_attribute_name :name => "名称" /　t("activerecord.attributes.camp_site.name")と同じ
           name: 名称
           address: 住所
-          url: URL
+          website_url: Webサイト
           detail: 詳細
   # 全てのmodelで共通して使用するattributesを定義
   attributes:

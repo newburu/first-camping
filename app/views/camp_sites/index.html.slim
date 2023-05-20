@@ -5,7 +5,7 @@ h1 Camp sites
 = search_form_for @q do |f|
   = f.input :name_cont, required: false, label: t('activerecord.attributes.camp_site.name')
   = f.input :address_cont, required: false, label: t('activerecord.attributes.camp_site.address')
-  = f.input :url_cont, required: false, label: t('activerecord.attributes.camp_site.url')
+  = f.input :website_url_cont, as: :string, required: false, label: t('activerecord.attributes.camp_site.website_url')
   = f.input :detail_cont, required: false, label: t('activerecord.attributes.camp_site.detail')
 
   = f.submit
@@ -17,7 +17,7 @@ table#camp_sites
       th
       th = sort_link(@q, :name)
       th = sort_link(@q, :address)
-      th = sort_link(@q, :url)
+      th = sort_link(@q, :website_url)
       th = sort_link(@q, :detail)
 
   tbody
@@ -28,7 +28,7 @@ table#camp_sites
 
         td = camp_site.name
         td = camp_site.address
-        td = camp_site.url
+        td = camp_site.website_url
         td = camp_site.detail
 
 hr

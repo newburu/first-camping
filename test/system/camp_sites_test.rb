@@ -17,7 +17,7 @@ class CampSitesTest < ApplicationSystemTestCase
     fill_in "Address", with: @camp_site.address
     fill_in "Detail", with: @camp_site.detail
     fill_in "Name", with: @camp_site.name
-    fill_in "Url", with: @camp_site.url
+    fill_in "Website Url", with: @camp_site.website_url
     click_on "Create Camp site"
 
     assert_text "Camp site was successfully created"
@@ -31,7 +31,7 @@ class CampSitesTest < ApplicationSystemTestCase
     fill_in "Address", with: @camp_site.address
     fill_in "Detail", with: @camp_site.detail
     fill_in "Name", with: @camp_site.name
-    fill_in "Url", with: @camp_site.url
+    fill_in "Website Url", with: @camp_site.website_url
     click_on "Update Camp site"
 
     assert_text "Camp site was successfully updated"

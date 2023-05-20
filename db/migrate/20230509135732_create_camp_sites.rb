@@ -3,7 +3,7 @@ class CreateCampSites < ActiveRecord::Migration[7.0]
     create_table :camp_sites do |t|
       t.string :name
       t.string :address
-      t.string :url
+      t.string :website_url
       t.json :images
       t.text :detail
       t.datetime :deleted_at

@@ -21,7 +21,7 @@ class CampSite < ApplicationRecord
   end
 
   def self.ransackable_attributes(auth_object = nil)
-    ["address", "created_at", "deleted_at", "detail", "id", "images", "name", "updated_at", "url"]
+    ["address", "created_at", "deleted_at", "detail", "id", "images", "name", "updated_at", "website_url"]
   end
 
 end

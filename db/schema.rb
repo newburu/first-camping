@@ -14,7 +14,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_09_135732) do
   create_table "camp_sites", force: :cascade do |t|
     t.string "name"
     t.string "address"
-    t.string "url"
+    t.string "website_url"
     t.json "images"
     t.text "detail"
     t.datetime "deleted_at"
