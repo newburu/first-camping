@@ -1,0 +1,16 @@
+div id="#{dom_id camp_site}"
+  .flex.flex-row.p-1
+    - image = camp_site.images[0]
+    - if image.present?
+      = image_tag image.url, class: "rounded-lg thumb"
+    - else
+      = image_tag "default.png", class: "rounded-lg thumb"
+    .flex.flex-col
+      .text-xs
+        = link_to camp_site.name, camp_site, class: "link link-primary align-bottom"
+      .text-xs
+        = camp_site.address
+      .text-xs
+        = camp_site.website_url
+      .text-xs
+        = camp_site.detail

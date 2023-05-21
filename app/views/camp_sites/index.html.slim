@@ -1,0 +1,36 @@
+p style="color: green" = notice
+
+h1 Camp sites
+
+= search_form_for @q do |f|
+  = f.input :name_cont, required: false, label: t('activerecord.attributes.camp_site.name')
+  = f.input :address_cont, required: false, label: t('activerecord.attributes.camp_site.address')
+  = f.input :website_url_cont, as: :string, required: false, label: t('activerecord.attributes.camp_site.website_url')
+  = f.input :detail_cont, required: false, label: t('activerecord.attributes.camp_site.detail')
+
+  = f.submit
+
+table#camp_sites
+  thead
+    tr
+      th
+      th
+      th = sort_link(@q, :name)
+      th = sort_link(@q, :address)
+      th = sort_link(@q, :website_url)
+      th = sort_link(@q, :detail)
+
+  tbody
+    - @camp_sites.each do |camp_site|
+      tr
+        td = link_to t('.btn.show'), camp_site
+        td = button_to t('btn.destroy'), camp_site, method: :delete, form: { data: { turbo_confirm: t('confirm.destroy') } }, class: "btn btn-warning rounded-md"
+
+        td = camp_site.name
+        td = camp_site.address
+        td = camp_site.website_url
+        td = camp_site.detail
+
+hr
+
+= link_to t('.btn.new'), new_camp_site_path, class: "btn btn-primary"

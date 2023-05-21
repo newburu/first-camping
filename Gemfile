@@ -46,7 +46,7 @@ gem "bootsnap", require: false
 # gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
-# gem "image_processing", "~> 1.2"
+gem "image_processing", "~> 1.2"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -93,3 +93,23 @@ group :development do
   gem 'bcrypt_pbkdf'
   gem 'sshkit-sudo'
 end
+
+# View関係
+gem "slim-rails"
+gem "simple_form"
+
+# i18n
+gem 'rails-i18n'
+group :development do
+  gem 'i18n-debug'
+end
+
+# 画像アップロード
+gem 'carrierwave'
+gem "mini_magick"
+
+# 論理削除
+gem 'paranoia'
+
+# 検索
+gem 'ransack'
