@@ -1,0 +1,10 @@
+p style="color: green" = notice
+
+== render @camp_log
+
+div
+  => link_to "Edit this camp log", edit_camp_log_path(@camp_log)
+  '|
+  =< link_to "Back to camp logs", camp_logs_path
+
+  = button_to "Destroy this camp log", @camp_log, method: :delete
