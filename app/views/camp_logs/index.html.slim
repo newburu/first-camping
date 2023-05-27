@@ -2,10 +2,37 @@ p style="color: green" = notice
 
 h1 Camp logs
 
-#camp_logs
-  - @camp_logs.each do |camp_log|
-    == render camp_log
-    p
-      = link_to "Show this camp log", camp_log
+= search_form_for @q do |f|
+  = f.input :camp_site_id_eq, as: :select, collection: CampSite.all.map{|cs| [cs.name, cs.id] }, required: false, label: t('activerecord.models.camp_site')
+  = f.input :start_day_gteq, required: false, label: t('activerecord.attributes.camp_log.start_day')
+  = f.input :start_day_lteq, required: false, label: false
+  = f.input :end_day_gteq, required: false, label: t('activerecord.attributes.camp_log.end_day')
+  = f.input :end_day_lteq, required: false, label: false
+  = f.input :detail_cont, required: false, label: t('activerecord.attributes.camp_log.detail')
 
-= link_to "New camp log", new_camp_log_path
+  = f.submit
+
+table#camp_logs
+  thead
+    tr
+      th
+      th
+      th = sort_link(@q, :camp_site_id)
+      th = sort_link(@q, :start_day)
+      th = sort_link(@q, :end_day)
+      th = sort_link(@q, :detail)
+
+  tbody
+    - @camp_logs.each do |camp_log|
+      tr
+        td = link_to t('.btn.show'), camp_log
+        td = button_to t('btn.destroy'), camp_log, method: :delete, form: { data: { turbo_confirm: t('confirm.destroy') } }, class: "btn btn-warning rounded-md"
+
+        td = camp_log.camp_site.name
+        td = camp_log.start_day
+        td = camp_log.end_day
+        td = camp_log.detail
+
+hr
+
+= link_to t('.btn.new'), new_camp_log_path, class: "btn btn-primary"
