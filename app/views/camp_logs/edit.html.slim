@@ -1,0 +1,10 @@
+h1 Editing camp log
+
+== render "form", camp_log: @camp_log
+
+br
+
+div
+  => link_to "Show this camp log", @camp_log
+  '|
+  =< link_to "Back to camp logs", camp_logs_path

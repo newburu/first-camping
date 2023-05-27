@@ -113,3 +113,9 @@ gem 'paranoia'
 
 # 検索
 gem 'ransack'
+
+# SEO
+gem 'meta-tags'
+
+# 設定
+gem 'config'

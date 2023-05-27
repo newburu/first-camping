@@ -1,0 +1,2 @@
+module CampLogsHelper
+end

@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  camp_site: one
+  user: one
+  start_day: 2023-05-21
+  end_day: 2023-05-21
+  images: 
+  detail: MyText
+
+two:
+  camp_site: two
+  user: two
+  start_day: 2023-05-21
+  end_day: 2023-05-21
+  images: 
+  detail: MyText
